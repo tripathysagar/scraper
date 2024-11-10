@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "scraper"
+  site-url: "https://tripathysagar.github.io/scraper"
+  description: "a universal scrapper"
+  repo-branch: main
+  repo-url: "https://github.com/tripathysagar/scraper"
