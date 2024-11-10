@@ -5,4 +5,7 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://tripathysagar.github.io',
                 'git_url': 'https://github.com/tripathysagar/scraper',
                 'lib_path': 'scraper'},
-  'syms': {'scraper.core': {'scraper.core.foo': ('core.html#foo', 'scraper/core.py')}}}
+  'syms': { 'scraper.core': { 'scraper.core.hydrate_links': ('core.html#hydrate_links', 'scraper/core.py'),
+                              'scraper.core.valid_href': ('core.html#valid_href', 'scraper/core.py')},
+            'scraper.scrap': { 'scraper.scrap.get_brow': ('scrap.html#get_brow', 'scraper/scrap.py'),
+                               'scraper.scrap.get_href': ('scrap.html#get_href', 'scraper/scrap.py')}}}
