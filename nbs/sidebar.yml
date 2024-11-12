@@ -3,5 +3,5 @@ website:
     contents:
       - index.ipynb
       - 00_core.ipynb
-      - 01_scrap.ipynb
+      - 01_playwright_.ipynb
       - 02_req.ipynb

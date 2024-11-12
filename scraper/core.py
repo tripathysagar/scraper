@@ -5,18 +5,18 @@
 # %% auto 0
 __all__ = ['IGNORE_EXT', 'HTTP_URL_PATTERN', 'ALLOWED_EXT_CONTENT_TYPS', 'valid_href', 'hydrate_links', 'get_fn_from_url']
 
-# %% ../nbs/00_core.ipynb 3
+# %% ../nbs/00_core.ipynb 2
 import re
 from fastcore.all import *
 from urllib.parse import urlparse, urlencode, quote_plus, unquote
 import requests
 
-# %% ../nbs/00_core.ipynb 4
+# %% ../nbs/00_core.ipynb 3
 IGNORE_EXT = [
     ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".tif", ".webp",  # Image Files
     ".mp3", ".wav", ".aac", ".flac", ".mp4", ".avi", ".mov", ".mkv", ".webm",  # Audio and Video Files
     ".zip", ".rar", ".tar", ".gz", ".7z",  # Archive Files
-    ".html", ".css", ".js", ".json", ".xml", ".yaml", ".yml", ".md", ".php",  # Web and Code Files
+    ".css", ".js", ".json", ".xml", ".yaml", ".yml", ".md",  # Web and Code Files
     ".sql", ".sqlite", ".db", ".bak",  # Database and Backup Files
     ".iso", ".epub", ".chm", ".dmg", ".apk", ".exe", ".bin",  # Miscellaneous Files
     ".py", ".java", ".cpp", ".go", ".rb", ".sh",  # Code and Script Files
@@ -30,8 +30,8 @@ def valid_href(href:str):
     if href is None:
         return False
     ignore_conditions = [
-        lambda x: x == "" or x == "#" or x in "x",
-        lambda x: x.startswith(("ftp:", "irc:", "mailto:", "tel:", "javascript:", "app://")),
+        lambda x: x == "" or x == "#" ,
+        lambda x: x.startswith(("ftp:", "irc:", "mailto:", "tel:", "javascript:", "app://", "#", ".#")),
         lambda x: any(i in x for i in ["private","subscribe","paywall","login"]),
         lambda x: any(x.endswith(i) for i in IGNORE_EXT)
         ]
@@ -43,10 +43,14 @@ def valid_href(href:str):
 
     return True
 
-# %% ../nbs/00_core.ipynb 6
+# %% ../nbs/00_core.ipynb 5
 HTTP_URL_PATTERN = r'^http[s]*://.+'
 def hydrate_links(local_domain, url):
     """Converts relative URLs to absolute; returns None for external links."""
+    url = unquote(url)
+    if '#' in url:
+        return None
+        
     clean_link = None
     
     if re.search(HTTP_URL_PATTERN, url):
@@ -65,9 +69,9 @@ def hydrate_links(local_domain, url):
         if clean_link.endswith("/") or  clean_link.endswith("#"):
             clean_link = clean_link[:-1]
 
-    return unquote(clean_link)
+    return clean_link 
 
-# %% ../nbs/00_core.ipynb 9
+# %% ../nbs/00_core.ipynb 8
 ALLOWED_EXT_CONTENT_TYPS = {
     ".pdf": "application/pdf",
     ".doc": "application/msword",

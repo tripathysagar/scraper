@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -80,54 +79,60 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="Write, test, document, and distribute software packages and technical articles — all in one place, your notebook.">
 <meta name="twitter:image" content="https://nbdev.fast.ai/images/card.png">
 <meta name="twitter:card" content="summary_large_image">
-</head>
+<style id="quarto-target-style">
+      section:target::before {
+        content: "";
+        display: block;
+        height: 62px;
+        margin: -62px 0 0;
+      }</style></head>
 
-<body class="nav-sidebar nav-fixed fullcontent">
+<body class="nav-sidebar nav-fixed fullcontent quarto-light" data-bs-offset="62" style="padding-top: 62px;">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top headroom--top headroom--not-bottom">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="https://nbdev.fast.ai/" data-original-href="https://nbdev.fast.ai/index.html">
     <span class="navbar-title">nbdev</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
+            <div id="quarto-search" class="type-overlay" title="Search"><div class="aa-Autocomplete" role="combobox" aria-expanded="false" aria-haspopup="listbox"><button type="button" class="aa-DetachedSearchButton"><div class="aa-DetachedSearchButtonIcon"><svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg></div><div class="aa-DetachedSearchButtonPlaceholder"></div><div class="aa-DetachedSearchButtonQuery"></div></button></div></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./getting_started.html"> 
+    <a class="nav-link" href="https://nbdev.fast.ai/getting_started.html" data-original-href="https://nbdev.fast.ai/getting_started.html"> 
 <span class="menu-text">Get Started</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tutorials/tutorial.html"> 
+    <a class="nav-link" href="https://nbdev.fast.ai/tutorials/tutorial.html" data-original-href="https://nbdev.fast.ai/tutorials/tutorial.html"> 
 <span class="menu-text">Tutorial</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html"> 
+    <a class="nav-link" href="https://nbdev.fast.ai/blog/" data-original-href="https://nbdev.fast.ai/blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="https://nbdev.fast.ai/#" id="nav-menu-help" role="link" data-bs-toggle="dropdown" aria-expanded="false" data-original-href="https://nbdev.fast.ai/#">
  <span class="menu-text">Help</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-help">    
         <li>
-    <a class="dropdown-item" href="https://github.com/fastai/nbdev/issues"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/fastai/nbdev/issues" data-original-href="https://github.com/fastai/nbdev/issues"><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Report an Issue</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://forums.fast.ai/"><i class="bi bi-chat-right-text" role="img">
+    <a class="dropdown-item" href="https://forums.fast.ai/" data-original-href="https://forums.fast.ai/"><i class="bi bi-chat-right-text" role="img">
 </i> 
  <span class="dropdown-text">Fast.ai Forum</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./getting_started.html#faq"><i class="bi bi-question-circle" role="img">
+    <a class="dropdown-item" href="https://nbdev.fast.ai/getting_started.html#faq" data-original-href="https://nbdev.fast.ai/getting_started.html#faq"><i class="bi bi-question-circle" role="img">
 </i> 
  <span class="dropdown-text">FAQ</span></a>
   </li>  
@@ -136,12 +141,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/fastai/nbdev"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/fastai/nbdev" data-original-href="https://github.com/fastai/nbdev"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/fastdotai"> <i class="bi bi-twitter" role="img" aria-label="Fast.ai Twitter">
+    <a class="nav-link" href="https://twitter.com/fastdotai" data-original-href="https://twitter.com/fastdotai"> <i class="bi bi-twitter" role="img" aria-label="Fast.ai Twitter">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -153,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar" style="min-height: calc(-160px + 100vh);">
 <!-- sidebar -->
 <!-- margin-sidebar -->
 <!-- main -->
@@ -185,8 +190,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="create-delightful-software-with-jupyter-notebooks" class="hero-banner content-block">
 <h1><span style="color:#009AF1">Create delightful software</span><br>with Jupyter Notebooks</h1>
 <h3 id="write-test-document-and-distribute-software-packages-and-technical-articles-all-in-one-place-your-notebook.">Write, test, document, and distribute software packages and technical articles — all in one place, your notebook.</h3>
-<p><a href="./getting_started.html" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Get started</a></p>
-<p><a href="images/card.png"><img src="images/card.png" class="img-fluid" style="margin-top: 40px; margin-bottom: 40px"></a></p>
+<p><a href="https://nbdev.fast.ai/getting_started.html" class="btn-action-primary btn-action btn btn-success btn-lg" role="button" data-original-href="https://nbdev.fast.ai/getting_started.html">Get started</a></p>
+<p><a href="https://nbdev.fast.ai/images/card.png" data-original-href="https://nbdev.fast.ai/images/card.png"><img src="images/card.png" class="img-fluid" style="margin-top: 40px; margin-bottom: 40px"></a></p>
 </section>
 <section id="trusted-in-industry" class="hero-banner mid-content">
 <h2><span style="color:#009AF1">Trusted</span> in industry</h2>
@@ -255,37 +260,37 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <div class="content-block grid gap-4">
 <div class="testimonial g-col-12 g-col-md-6">
-<p><a href="images/chris-lattner.png"><img src="images/chris-lattner.png" class="img-fluid"></a></p>
+<p><a href="https://nbdev.fast.ai/images/chris-lattner.png" data-original-href="https://nbdev.fast.ai/images/chris-lattner.png"><img src="images/chris-lattner.png" class="img-fluid"></a></p>
 <h1 id="chris-lattner">Chris Lattner</h1>
 <h2 id="inventor-of-swift-and-llvm">Inventor of Swift and LLVM</h2>
 <h3 id="i-really-do-think-nbdev-is-a-huge-step-forward-for-programming-environments.">I really do think [nbdev] is a huge step forward for programming environments.</h3>
 </div>
 <div class="testimonial g-col-12 g-col-md-6">
-<p><a href="images/fernando-pérez.jpeg"><img src="images/fernando-pérez.jpeg" class="img-fluid"></a></p>
+<p><a href="https://nbdev.fast.ai/images/fernando-p%C3%A9rez.jpeg" data-original-href="https://nbdev.fast.ai/images/fernando-p%C3%A9rez.jpeg"><img src="images/fernando-pérez.jpeg" class="img-fluid"></a></p>
 <h1 id="fernando-pérez">Fernando Pérez</h1>
 <h2 id="creator-of-jupyter">Creator of Jupyter</h2>
 <h3 id="nbdev-should-be-celebrated-and-used-a-lot-more-i-have-kept-a-tab-with-your-original-nbdev-blog-post-open-for-months-in-chrome-because-of-how-often-i-refer-to-it-and-point-others-to-this-work.">[nbdev] should be celebrated and used a lot more — I have kept a tab with your original nbdev blog post open for months in Chrome because of how often I refer to it and point others to this work.</h3>
 </div>
 <div class="testimonial g-col-12 g-col-md-6">
-<p><a href="images/david-berg.jpeg"><img src="images/david-berg.jpeg" class="img-fluid"></a></p>
+<p><a href="https://nbdev.fast.ai/images/david-berg.jpeg" data-original-href="https://nbdev.fast.ai/images/david-berg.jpeg"><img src="images/david-berg.jpeg" class="img-fluid"></a></p>
 <h1 id="david-berg">David Berg</h1>
 <h2 id="software-engineer-netflix">Software Engineer, Netflix</h2>
 <h3 id="prior-to-using-nbdev-documentation-was-the-most-cumbersome-aspect-of-our-software-development-process-using-nbdev-allows-us-to-spend-more-time-creating-rich-prose-around-the-many-code-snippets-guaranteeing-the-whole-experience-is-robust.-nbdev-has-turned-what-was-once-a-chore-into-a-natural-extension-of-the-notebook-based-testing-we-were-already-doing.">Prior to using nbdev, documentation was the most cumbersome aspect of our software development process… Using nbdev allows us to spend more time creating rich prose around the many code snippets guaranteeing the whole experience is robust.<br><br>nbdev has turned what was once a chore into a natural extension of the notebook-based testing we were already doing.</h3>
 </div>
 <div class="testimonial g-col-12 g-col-md-6">
-<p><a href="images/erik-gaasedelen.jpeg"><img src="images/erik-gaasedelen.jpeg" class="img-fluid"></a></p>
+<p><a href="https://nbdev.fast.ai/images/erik-gaasedelen.jpeg" data-original-href="https://nbdev.fast.ai/images/erik-gaasedelen.jpeg"><img src="images/erik-gaasedelen.jpeg" class="img-fluid"></a></p>
 <h1 id="erik-gaasedelen">Erik Gaasedelen</h1>
 <h2 id="software-engineer-lyft">Software Engineer, Lyft</h2>
 <h3 id="i-use-this-in-production-at-my-company.-its-an-awesome-tool-nbdev-streamlines-everything-so-i-can-write-docs-tests-and-code-all-in-one-place-the-packaging-is-also-really-well-thought-out.-from-my-point-of-view-it-is-close-to-a-pareto-improvement-over-traditional-python-library-development.">I use this in production at my company. It’s an awesome tool… nbdev streamlines everything so I can write docs, tests, and code all in one place… The packaging is also really well thought out.<br><br>From my point of view it is close to a Pareto improvement over traditional Python library development.</h3>
 </div>
 <div class="testimonial g-col-12 g-col-md-6">
-<p><a href="images/roxanna-pourzand.jpeg"><img src="images/roxanna-pourzand.jpeg" class="img-fluid"></a></p>
+<p><a href="https://nbdev.fast.ai/images/roxanna-pourzand.jpeg" data-original-href="https://nbdev.fast.ai/images/roxanna-pourzand.jpeg"><img src="images/roxanna-pourzand.jpeg" class="img-fluid"></a></p>
 <h1 id="roxanna-pourzand">Roxanna Pourzand</h1>
 <h2 id="product-manager-transform">Product Manager, Transform</h2>
 <h3 id="were-so-excited-about-using-nbdev.-our-product-is-technical-so-our-resulting-documentation-includes-a-lot-of-code-based-examples.-before-nbdev-we-had-no-way-of-maintaining-our-code-examples-and-ensuring-that-it-was-up-to-date-for-both-command-inputs-and-outputs.-it-was-all-manual.-with-nbdev-we-now-have-this-under-control-in-a-sustainable-way.-since-weve-deployed-these-docs-we-also-had-a-situation-where-we-were-able-to-identify-a-bug-in-one-of-our-interfaces-which-we-found-by-seeing-the-error-that-was-output-in-the-documentation.">We’re so excited about using nbdev. Our product is technical so our resulting documentation includes a lot of code-based examples. Before nbdev, we had no way of maintaining our code examples and ensuring that it was up-to-date for both command inputs and outputs. It was all manual. With nbdev, we now have this under control in a sustainable way. Since we’ve deployed these docs, we also had a situation where we were able to identify a bug in one of our interfaces, which we found by seeing the error that was output in the documentation.</h3>
 </div>
 <div class="testimonial g-col-12 g-col-md-6">
-<p><a href="images/hugo-bowne-anderson.jpeg"><img src="images/hugo-bowne-anderson.jpeg" class="img-fluid"></a></p>
+<p><a href="https://nbdev.fast.ai/images/hugo-bowne-anderson.jpeg" data-original-href="https://nbdev.fast.ai/images/hugo-bowne-anderson.jpeg"><img src="images/hugo-bowne-anderson.jpeg" class="img-fluid"></a></p>
 <h1 id="hugo-bowne-anderson">Hugo Bowne-Anderson</h1>
 <h2 id="head-of-developer-relations-outerbounds">Head of Developer Relations, Outerbounds</h2>
 <h3 id="nbdev-has-transformed-the-way-we-write-documentation.-gone-are-the-days-of-worrying-about-broken-code-examples-when-our-api-changes-or-due-to-human-errors-associated-with-copying-pasting-code-into-markdown-files.-the-authoring-experience-of-nbdev-is-also-powerful-allowing-us-to-write-prose-and-live-code-in-a-unified-interface-which-allows-more-experimentation-with-technical-content.-on-top-of-this-nbdev-allows-us-to-include-unit-tests-in-our-documentation-which-mitigates-the-burden-of-maintaining-the-docs-over-time.">Nbdev has transformed the way we write documentation. Gone are the days of worrying about broken code examples when our API changes or due to human errors associated with copying &amp; pasting code into markdown files. The authoring experience of nbdev is also powerful, allowing us to write prose and live code in a unified interface, which allows more experimentation with technical content. On top of this, nbdev allows us to include unit tests in our documentation which mitigates the burden of maintaining the docs over time.</h3>
@@ -294,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="get-started-in-seconds" class="hero-banner content-block" style="margin-top: 40px">
 <h2>Get started in seconds</h2>
-<p><a href="./getting_started.html" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Install nbdev</a></p>
+<p><a href="https://nbdev.fast.ai/getting_started.html" class="btn-action-primary btn-action btn btn-success btn-lg" role="button" data-original-href="https://nbdev.fast.ai/getting_started.html">Install nbdev</a></p>
 </section>
 
 
@@ -725,4 +730,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fastai/nbdev/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fastai/nbdev/issues/new" class="toc-action" data-original-href="https://github.com/fastai/nbdev/issues/new"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

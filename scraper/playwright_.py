@@ -50,7 +50,7 @@ async def get_href(page:Page):
         traceback.print_exc()
         raise e
 
-# %% ../nbs/01_playwright_.ipynb 11
+# %% ../nbs/01_playwright_.ipynb 10
 log_err = lambda func, url, err: print(f"Error in {func=}\n{url=}\n{err}")
 
 def download_file(url:str, fn:Path='.'):
@@ -124,7 +124,7 @@ async def crawl(url: str, dir_n: Path, brow_typ: str = "ch"):
             url = queue.pop()
             try:
                 if url and url not in seen:
-                    print(f"{url=}")
+                    #print(f"{url=}")
                     fn = get_fn_from_url(url)
                     f_ext = fn.split('.')[-1]  # Get file extension
 
