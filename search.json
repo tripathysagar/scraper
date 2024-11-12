@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "req.html",
+    "href": "req.html",
+    "title": "req",
+    "section": "",
+    "text": "source\n\nReq\n\n Req (url)\n\nInitialize self. See help(type(self)) for accurate signature.\n\nreq = Req('https://fastcore.fast.ai/')\nreq(Path('Test/'))\nprint(md_fn)\nassert md_fn.exists(), \"File not found\"\nassert md_fn.stat().st_size &gt; 0, \"File is empty\"\n\nTest/fastcore.fast.ai/_.md\n\n\n\nreq = Req('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf')\nreq(Path('Test/'))\nprint(pdf_fn)\nassert pdf_fn.exists(), \"File not found\"\nassert pdf_fn.stat().st_size &gt; 0, \"File is empty\"\n\nTest/www.w3.org/_wai_er_tests_xhtml_testfiles_resources_pdf_dummy.pdf\n\n\n/opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/site-packages/fastcore/docscrape.py:230: UserWarning: Unknown section Attributes:\n  else: warn(msg)\n/opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/site-packages/fastcore/docscrape.py:230: UserWarning: Unknown section Methods:\n  else: warn(msg)\n\nsource\n\n\nspider\n\n spider (url:str, dir_n:pathlib.Path=Path('Test'))\n\nA simple web crawler (spider). The spider class is responsible for visiting URLs, processing them to extract links, and then continuing the crawl recursively. It keeps track of visited URLs to avoid revisiting the same page.\n\ns = spider('https://fastcore.fast.ai/', Path('Test/'))\ns.run()\n\nProcessed: https://fastcore.fast.ai/docments.html... | Links found: 18         | Visited: 23         | To visit: 168          90        \ntime taken: 1.4e+01 sec",
+    "crumbs": [
+      "req"
+    ]
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nvalid_href\n\n valid_href (href:str)\n\nChecks if the provided href should be ignored based on a set of conditions. Returns True if the href matches any ignore condition, otherwise False.\n\nhrefs = [\n    \"mailto:someone@example.com\", \"tel:+1234567890\",\"javascript:void(0)\",\"https://example.com/file.mp4\",\n    \"https://example.com/image.JPG\",\"https://example.com/private-area\",\"https://example.com/login\",\n    \"https://example.com/subscribe\",\"https://example.com/api/data.json\",\"app://some-app\",\n]\nassert not any([valid_href(href) for href in hrefs ])\n\n\nsource\n\n\nhydrate_links\n\n hydrate_links (local_domain, url)\n\nConverts relative URLs to absolute; returns None for external links.\n\nassert hydrate_links(    \"or.wikipedia.org\",\n    \"https://or.wikipedia.org/wiki/%E0%AC%86%E0%AC%87%E0%AC%9C%E0%AC%BE%E0%AC%95_%E0%AC%B8%E0%AC%BE%E0%AC%A8%E0%AD%8D%E0%AC%A4%E0%AD%8D%E0%AC%B0%E0%AC%BE\",\n) == 'https://or.wikipedia.org/wiki/ଆଇଜାକ_ସାନ୍ତ୍ରା'\n\n\nlocal_domain = \"example.com\"\n\nassert hydrate_links(local_domain, \"https://example.com/path\") == \"https://example.com/path\"\nassert hydrate_links(local_domain, \"https://otherdomain.com/path\") is None\nassert hydrate_links(local_domain, \"/path\") == \"https://example.com/path\"\nassert hydrate_links(local_domain, \"path\") == \"https://example.com/path\"\nassert hydrate_links(local_domain, \"https://example.com/path/\") == \"https://example.com/path\"\nassert hydrate_links(local_domain, \"/path/\") == \"https://example.com/path\"\nassert hydrate_links(local_domain, \"/\") == \"https://example.com\"\nassert hydrate_links(local_domain, \"\") == \"https://example.com\"\nassert hydrate_links(local_domain, \"http://example.com/path\") == \"http://example.com/path\"\nassert hydrate_links(local_domain, \"http://example.com/path/#\") is None\nassert hydrate_links(local_domain, \"http://example.com/path#\") is None\n\n\nsource\n\n\nget_fn_from_url\n\n get_fn_from_url (url:str)\n\nReturn the file name from the URL. If URL ends with .pdf, .doc, .docx, .html etc, return path.. Else return path_params_query.html.\n\nassert get_fn_from_url(\"https://example.com/somepath/with/query?name=value\") == \"_somepath_with_query_name_value.html\"\nassert get_fn_from_url(\"https://example.com/somepath/report.pdf\") == \"_somepath_report.pdf\"\nassert get_fn_from_url(\"https://example.com/somepath/page.html\") == \"_somepath_page.html\"\nassert get_fn_from_url(\"https://example.com/somepath/with/space%20in%20path\") == \"_somepath_with_space_in_path.html\"\nassert get_fn_from_url(\"https://example.com/somepath/with/equals=sign\") == \"_somepath_with_equals_sign.html\"\nassert get_fn_from_url(\"https://example.com/\") == \"_.html\"\nassert get_fn_from_url(\"https://example.com/somepath/file.csv\") == \"_somepath_file.csv\"\nassert get_fn_from_url(\"https://example.com/somepath/long_query?param=value&another=more\") == '_somepath_long_query_param_value&another_more.html'\nassert get_fn_from_url(\"https://example.com/somepath/.docx\") == \"_somepath_.docx\"",
+    "crumbs": [
+      "core"
+    ]
+  },
+  {
+    "objectID": "playwright_.html",
+    "href": "playwright_.html",
+    "title": "playwright_",
+    "section": "",
+    "text": "source\n\nget_brow\n\n get_brow (pw:playwright.async_api._generated.Playwright, brow_n:str)\n\nreturn browser_name object from ch -&gt; chromium ff -&gt; firefox wk -&gt; webkit\n\nasync with async_playwright() as pw:\n    async def _test(bn):\n        browser = await get_brow(pw, bn)\n        assert browser is not None\n        print(f\"Launched {bn}\")\n        await browser.close()\n\n    await asyncio.gather(\n        _test(\"ch\"),\n        _test(\"ff\"),\n        _test(\"wk\"),\n    )\n\nLaunched wk\nLaunched ch\nLaunched ff\n\n\n\nsource\n\n\nget_href\n\n get_href (page:playwright.async_api._generated.Page)\n\n*Takes in Page object and get back all the href which are not part of ignore_href.\nIt is doen by loop through all the a tags.*\n\nasync with async_playwright() as pw:\n    brow = await get_brow(pw, \"ch\")\n    page = await brow.new_page()\n    await page.goto('https://nbdev.fast.ai/') \n    hrefs = await get_href(page)\n    await page.close(); await brow.close()\n\nassert len(hrefs) != 0, \"Expected href to contain links, but it is empty.\"\nprint(f\"{hrefs=}\")\n\nhrefs=['https://nbdev.fast.ai/', 'https://nbdev.fast.ai/getting_started.html', 'https://nbdev.fast.ai/tutorials/tutorial.html', 'https://nbdev.fast.ai/blog/', 'https://nbdev.fast.ai/#', 'https://github.com/fastai/nbdev/issues', 'https://forums.fast.ai/', 'https://nbdev.fast.ai/getting_started.html#faq', 'https://github.com/fastai/nbdev', 'https://twitter.com/fastdotai', 'https://nbdev.fast.ai/getting_started.html', 'https://nbdev.fast.ai/getting_started.html', 'https://github.com/fastai/nbdev/issues/new']\n\n\n\nfor i in hrefs:\n    print(f\"{i=} -&gt; \", hydrate_links(\"nbdev.fast.ai\", i) )\n\ni='https://nbdev.fast.ai/' -&gt;  https://nbdev.fast.ai\ni='https://nbdev.fast.ai/getting_started.html' -&gt;  https://nbdev.fast.ai/getting_started.html\ni='https://nbdev.fast.ai/tutorials/tutorial.html' -&gt;  https://nbdev.fast.ai/tutorials/tutorial.html\ni='https://nbdev.fast.ai/blog/' -&gt;  https://nbdev.fast.ai/blog\ni='https://nbdev.fast.ai/#' -&gt;  None\ni='https://github.com/fastai/nbdev/issues' -&gt;  None\ni='https://forums.fast.ai/' -&gt;  None\ni='https://nbdev.fast.ai/getting_started.html#faq' -&gt;  None\ni='https://github.com/fastai/nbdev' -&gt;  None\ni='https://twitter.com/fastdotai' -&gt;  None\ni='https://nbdev.fast.ai/getting_started.html' -&gt;  https://nbdev.fast.ai/getting_started.html\ni='https://nbdev.fast.ai/getting_started.html' -&gt;  https://nbdev.fast.ai/getting_started.html\ni='https://github.com/fastai/nbdev/issues/new' -&gt;  None\n\n\n\nsource\n\n\ndownload_file\n\n download_file (url:str, fn:pathlib.Path='.')\n\nDownloads a file from the specified URL and saves it to the given path. Args: url (str): The URL from which to download the file. fn (Path): The destination file path to save the downloaded content. Raises: Exception: If an error occurs during the download or saving process.\n\ndownload_file('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', \n              Path('Test/dummy.pdf'))\nassert Path('Test/dummy.pdf').exists(), \"File not found\"\nassert Path('Test/dummy.pdf').stat().st_size &gt; 0, \"File is empty\"\n\n\nsource\n\n\ndownload_html\n\n download_html (brow:playwright.async_api._generated.Browser, url:str,\n                fn:pathlib.Path)\n\ntakes in url either ending with .html or any abs adress retruns all the href with the abs links\n\nasync with async_playwright() as pw:\n    brow = await get_brow(pw, \"ch\")\n    assert len(await download_html(brow, url, Path('./Text/'))) &gt; 0 \n    await brow.close()\n\n\nsource\n\n\ncrawl\n\n crawl (url:str, dir_n:pathlib.Path, brow_typ:str='ch')\n\n*Asynchronously crawls and downloads HTML and specific file types within a given domain.\nArgs: url (str): The starting URL for crawling. dir_n (Path): The directory path where downloaded files will be saved. brow_typ (str): The browser type (default is “ch”).*\n\nawait crawl('https://fastcore.fast.ai/', Path('Test/'))",
+    "crumbs": [
+      "playwright_"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "scraper",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "scraper"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "scraper",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall scraper in Development mode\n# make sure scraper package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to scraper\n$ nbdev_prepare",
+    "crumbs": [
+      "scraper"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "scraper",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/tripathysagar/scraper.git\nor from conda\n$ conda install -c tripathysagar scraper\nor from pypi\n$ pip install scraper\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "scraper"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "scraper",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "scraper"
+    ]
+  }
+]
